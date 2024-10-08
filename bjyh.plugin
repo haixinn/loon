@@ -1,0 +1,7 @@
+#!name=北京银行
+
+[Rewrite]
+^https?:\/\/cdnmobibank\.bankofbeijing\.com\.cn\/cdn\/MarketingCloud\/.+\/.+\/99_1\/.+\.jpg - reject-200
+
+[MITM]
+hostname = cdnmobibank.bankofbeijing.com.cn

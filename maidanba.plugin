@@ -1,0 +1,17 @@
+#!name = 买单吧
+
+[Rule]
+DOMAIN-SUFFIX, track.bankcomm.com, REJECT
+
+[Rewrite]
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do reject-200
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interaction\/appInfo\/appNewestVersion reject-200
+^https?:\/\/creditcard.*\.bankcomm\.(com|cn)\/.*Ads\.do reject
+^https?:\/\/creditcard\.bankcomm\.(com|cn)\/tfimg\/public00\/M00\/4C\/6F reject-img
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interaction\/qryHighRiskUser reject
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_collection reject
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/CnsvMdbaptFinclipWeb reject-dict
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb\/homepage(\/discovery)?\/promote reject-dict
+
+[MitM]
+hostname = creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com,creditcard.bankcomm.cn,creditcard.bankcomm.com 

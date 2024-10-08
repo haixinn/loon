@@ -1,0 +1,7 @@
+#!name=东方财富
+
+[Rewrite]
+^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v\d - reject
+
+[MITM]
+hostname = emdcadvertise.eastmoney.com

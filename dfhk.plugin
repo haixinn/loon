@@ -1,0 +1,9 @@
+#!name=东方航空
+
+[Rewrite]
+# > 东方航空 - CEAIR
+^https?:\/\/app\.ceair\.com\/customize\/security\/update - reject-200
+^https?:\/\/app\.ceair\.com\/customize\/main\/adScreen - reject-dict
+
+[MITM]
+hostname = app.ceair.com
