@@ -82,12 +82,5 @@ DOMAIN, switch.cup.com.cn, REJECT
 # 云闪付 //wallet.95516.com
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 reject
 
-[Script]
-# 小米商城 //api.m.mi.com, shop-api.retail.mi.com
-http-response ^https:\/\/api\.m\.mi\.com\/v1\/(?:app\/start|order\/expressView) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body = true, tag = mi_mall
-
-# 中国农业银行 //mobilepaas.abchina.com.cn
-http-request ^https:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm$ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/header.js, tag = abchina
-
 [MitM]
 hostname = gab.122.gov.cn, acs-m.freshippo.com, osg-service.sgcc.com.cn,api.m.mi.com, shop-api.retail.mi.com, home.mi.com, mobilepaas.abchina.com.cn, wallet.95516.com
